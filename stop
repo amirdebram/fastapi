@@ -1,0 +1,5 @@
+#!/bin/bash
+
+systemctl stop api.service
+python3 delete_pycache.py
+# systemctl stop nginx.service

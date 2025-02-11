@@ -1,0 +1,19 @@
+[Unit]
+Description=Gunicorn instance to serve api for merrypak
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/var/www/api/
+
+Environment="PATH=/var/www/api/.venv/bin"
+Environment="SECRET_KEY=rb=bawvwn$gl#=48l#1%@e&np8skbi5780&ixj9a9-go)0kobe"
+Environment="ALGORITHM=HS256"
+Environment="SQLALCHEMY_DATABASE_URL=postgresql+asyncpg://username:password@localhost/database"
+
+ExecStart=/var/www/api/.venv/bin/gunicorn -c /var/www/api/run/gunicorn_config.py app.main:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
