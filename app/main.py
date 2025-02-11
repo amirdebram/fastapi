@@ -18,8 +18,8 @@ def get_app() -> FastAPI:
     # Generate list of allowed origins for all valid IPs in the range
     # origins = [
     #     "http://localhost:3000",
-    #     "https://dev.crystallogic.org",
-    #     "https://dev.crystallogic.org:8080",
+    #     "https://dev.domain.org",
+    #     "https://dev.domain.org:8080",
     # ]
 
     # Add middleware for rate limiting, HTTPS redirection, and trusted hosts
