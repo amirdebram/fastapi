@@ -9,7 +9,7 @@ router = APIRouter(
 
 @router.get("/", response_class=PlainTextResponse)
 async def index():
-    return "Welcome to the Crystal Logic API"
+    return "Welcome to the Fast API"
 
 @router.get("/robots.txt", response_class=PlainTextResponse, include_in_schema=False)
 async def robots():
