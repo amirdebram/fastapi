@@ -31,7 +31,7 @@ def get_app() -> FastAPI:
     #                    )
     app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
     # app.add_middleware(HTTPSRedirectMiddleware)
-    # app.add_middleware(TrustedHostMiddleware, allowed_hosts=["dev.crystallogic.org", "dev.crystallogic.org:8080", "localhost:3000"])
+    # app.add_middleware(TrustedHostMiddleware, allowed_hosts=["dev.domain.org", "dev.domain.org:8080", "localhost:3000"])
 
     # Include various routers
     app.include_router(router_index.router)
